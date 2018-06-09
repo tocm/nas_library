@@ -1,0 +1,222 @@
+.css_App_aligin {
+  text-align: center;
+  align-content: center;
+}
+
+
+.css_text_center{
+  text-align: center;
+  align-content: center;
+}
+.css_App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+
+
+/* 水平居中   */
+.css_hor_center {    
+  margin: 0 auto;    
+}   
+
+/* div置于底部(footer bottom)   */
+.css_bottom_footer {    
+  position: absolute; 
+  bottom: 0;    
+}
+
+/* 水平居中置底部 */
+.ver_hor_center {    
+  position: absolute;    
+  bottom: 0;
+  top: 60%;   
+  left: 35%;
+}
+
+.css_header_username {
+  position: absolute;    
+  bottom: 0;
+  top: 80%;   
+  left: 73%;
+}
+
+.css_App-header {
+   /* 允许重叠 */
+  position:relative;
+  background-color: rgb(62, 114, 173);
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+  margin: 0;
+  color: white;
+  /* 阴影 */
+  box-shadow:0 1px 3px rgb(48, 45, 45);
+}
+
+.css_header_l {
+  position:absolute;
+  text-align: center;
+  width: 350px;
+  margin: 0;
+  margin-top: 5px
+}
+.css_header_navBar{height:55px;background:#f5f5f9;color:#fff;font-size:16px;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+
+/*向右排版 */
+.css_header_r {
+  float: right; 
+  width: 350px;
+}
+
+.css_right{
+  float: right;
+}
+
+.css_header_center {
+  /*居中排版 */
+  text-align:center;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+
+.css_header_button {
+    padding: 8px;
+    margin: 7px;
+    width: 10em;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.css_header_button:hover {background-color: #0099cc;}
+
+
+.css_button {
+  padding: 8px;
+  background-color :#33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.css_button:hover {background-color: #0099cc;}
+
+
+
+.css_App-title {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.css_App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* 透明渐变 - color - transparent */
+.css_hr_color_to_transparent {
+  margin: 2;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(250, 243, 243, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+.css_div_login_container {
+  /* 允许重叠 */
+ position:relative;
+ background-color: rgba(212, 218, 224, 0.356);
+ width: 100%;
+ margin-top: 2.5em;
+}
+
+.css_div_login_content_l{
+  position: absolute;  
+  text-align: center;
+  width: 50%;
+  margin-top: 2em;
+  margin-left: 1em;
+}
+
+.css_div_login_content_r{
+  float: right;
+  width: 50%;
+  margin: 1em;
+}
+
+.css_input{
+  box-sizing: border-box;
+  font-size:1.4em;
+  height:1.8em;
+  border-radius:4px;
+  border:1px solid #c8cccf;
+  color:#6a6f77;
+  -webkit-appearance:none;
+  -moz-appearance: none;
+  appearance: none;
+  display:block;
+  outline:0;
+  padding:0.5em;
+  text-decoration:none;
+  width: 15em;
+}
+.css_input:focus{
+  border:1px solid #3377b8;
+}
+.css_input::-webkit-input-placeholder{
+  color:rgba(148, 145, 145, 0.295);
+  font-size: 0.8em
+}
+.css_input::-moz-input-placeholder{
+  color:rgba(148, 145, 145, 0.295);
+  font-size: 0.8em
+}
+.css_input::-ms-input-input-placeholder{
+  color:rgba(148, 145, 145, 0.295);
+  font-size: 0.8em
+}
+
+.css_login_title {
+  text-align: center;
+  align-content: center;
+  width: 50%;
+  color:#315ea5;
+}
+.css_login_input{
+  margin: 0;
+  width: 50%;
+}
+
+.css_login_button{
+  margin-top: 2.5em;
+  width: 50%;
+  font-size: 1em;
+}
+
+.css_login_text{
+  margin: 0;
+  color:#315ea5;
+}
+
+.css_footer_bar{
+  width: 100%;
+  height:70px;
+  background:rgb(62, 114, 173);
+  color:#fff;
+  font-size:16px;
+  box-shadow:0 1px 3px rgba(0,0,0,.3);
+  text-align: center;
+  align-content: center;
+  padding: 0.5em;
+  margin-top: 2.5em;
+}
+
+.css_text_margin_0{
+  margin: 0;
+}

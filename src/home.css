@@ -1,0 +1,121 @@
+/* -------以下为添加数据页样式------ */
+.css_div_add_content_container {
+  /* 允许重叠 */
+ position:relative;
+ /* background-color: rgba(212, 218, 224, 0.356); */
+ width: 100%;
+ margin-top: 1.8em;
+ align-content: center;
+}
+.css_input_addcontent_width{
+  width: 18em;
+}
+.css_div_table{
+  margin:0 auto;
+  width: 45%;
+  padding: 2.5em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #999999;
+  background-color: rgba(212, 218, 224, 0.356); 
+  /* background-color: bisque; */
+}
+.css_div_table_td{
+  float: left;
+  margin:0 auto;
+  margin: 0;
+  color:#524f4f;
+}
+
+.css_div_text_alert{
+  color: red;
+  font-size: 21px;
+  margin: 0;
+}
+
+.css_addItem_button{
+  padding: 8px;
+  margin: 0;
+  margin-top: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 10em;
+  background-color :#33b5e5;
+  color: #ffffff;
+}
+
+.css_addItem_text_title {
+  /*居中排版 */
+  /* background-color: #33b5e5; */
+  text-align:center;
+  width: 100%;
+  margin: 0;
+  color:#524f4f;
+}
+
+/* -------以下为显示所有数据列表页样式------ */
+
+.css_home_display_content_container {
+  /* 允许重叠 */
+ position:relative;
+ /* background-color: rgba(212, 218, 224, 0.356); */
+ width: 100%;
+ margin-top: 1.8em;
+ align-content: center;
+}
+
+table.altrowstable {
+  font-family: verdana,arial,sans-serif;
+  font-size:15px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #a9c6c9;
+  border-collapse: collapse;
+  width: 80%
+}
+table.altrowstable th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #a9c6c9;
+}
+table.altrowstable td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #a9c6c9;
+}
+.css_home_oddrowcolor{
+  background-color:#fafdfd;
+}
+.css_home_evenrowcolor{
+  background-color:#d9dddd96;
+}
+
+
+.css_allDataList_title {
+  /*居中排版 */
+  /* background-color: #33b5e5; */
+  text-align:center;
+  width: 100%;
+  margin: 0;
+  margin-top: 1em;
+  color:#524f4f;
+}
+
+.css_paging_text {
+  color:#524f4f;
+}
+
+.css_paging_text:hover{
+  color:#4aa6f1;
+  /* 鼠标移动到文字变手掌 */
+  cursor:pointer; 
+}
+
+.css_addNewItem_button{
+  margin: 0;
+  width: 20em;
+  left: 50%;
+  
+}
