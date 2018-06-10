@@ -53,6 +53,7 @@ class LibList extends Component{
                     <th>ID</th>
                     <th>书名</th>
                     <th>书本作者</th>
+                    <th>出版社</th>
                     <th>出版日期</th>
                     <th>存放位置</th>
                     <th>备注</th>

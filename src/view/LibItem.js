@@ -86,6 +86,7 @@ class LibItem extends Component{
                 {/* 加载不同控件 */}
                 {this.readMode()}
                 <td>{this.props.bookItem.bookAuthor}</td>
+                <td>{this.props.bookItem.bookPublishing}</td>
                 <td>{this.props.bookItem.bookDate}</td>
                 <td>{this.props.bookItem.location}</td>
                 <td>{this.props.bookItem.description}</td>

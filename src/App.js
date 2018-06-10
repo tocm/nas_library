@@ -6,7 +6,7 @@ import LoginPage from "./view/LoginPage"
 import LibHeader from './view/LibHeader';
 import HomePage from './view/HomePage';
 
-import NebPay from 'nebpay.js';
+// import NebPay from 'nebpay';//[只针对直接使用npm install 方式]
 import Nebulas from 'nebulas';
 import AppConfig from './AppConfig'
 import Utils from './Utils';
@@ -24,10 +24,18 @@ var PAGE_ITEM_MAX_COUNT = 10;
 var _currentPageNumber = 0;
 
 
-//load the nebPay
+//load the nebPay [针对直接使用npm install 方式，由于在es6 中npm run build 会有问题]
+// var nebPay = new NebPay();
+
+var NebPay = require("./dist/nebpay");
 var nebPay = new NebPay();
+
 console.log(nebPay);
 console.log("http host = "+_dapp_host);
+
+
+
+
 //load the Nebulas obj
 var Neb = Nebulas.Neb; // Neb
 var neb = new Neb(new Nebulas.HttpRequest(_dapp_host));
@@ -329,8 +337,7 @@ class App extends Component {
                 name: "UserInfo"
             },
             //callback 是交易查询服务器地址,
-            //callback: NebPay.config.mainnetUrl //在主网查询(默认值)
-            callback: (AppConfig.getNetType() == 1) ? NebPay.config.testnetUrl : NebPay.config.mainnetUrl, //在测试网查询
+        //    callback: (AppConfig.getNetType() == 1) ? NebPay.config.testnetUrl : NebPay.config.mainnetUrl, //在测试网查询
             listener: this.cbPushRegister //设置listener, 处理交易返回信息
         }
 
@@ -351,7 +358,7 @@ class App extends Component {
         var to = _dapp_libraryContractAddress; //Dapp的合约地址
         var value = "0";
         var callFunction = "save";
-        var callArgs = "[\"" + bookItem.userName + "\",\"" + bookItem.bookName + "\",\"" + bookItem.bookLocation + "\",\"" + bookItem.bookAuthor + "\",\"" + bookItem.bookDate +"\",\"" + bookItem.description +"\",\"" + getCurrentTimes() + "\"]"; //参数格式为参数数组的JSON字符串, 比如'["arg"]','["arg1","arg2]'        
+        var callArgs = "[\"" + bookItem.userName + "\",\"" + bookItem.bookName + "\",\"" + bookItem.bookLocation + "\",\"" + bookItem.bookAuthor + "\",\"" + bookItem.bookPublishing + "\",\"" + bookItem.bookDate +"\",\"" + bookItem.description +"\",\"" + getCurrentTimes() + "\"]"; //参数格式为参数数组的JSON字符串, 比如'["arg"]','["arg1","arg2]'        
         //var callFunction = "saveBook"; //调用的函数名称
         //var callArgs =  "[\"" + _userName + "\",\"" + bookName + "\",\"" + submitJsonData + "\"]";  //参数格式为参数数组的JSON字符串, 比如'["arg"]','["arg1","arg2]'        
         console.log("callArgs ", callArgs);
@@ -360,7 +367,7 @@ class App extends Component {
                 name: "book"
             },
             //callback 是交易查询服务器地址,
-            callback: (AppConfig.getNetType() == 1) ? NebPay.config.testnetUrl : NebPay.config.mainnetUrl, //在测试网查询
+        //    callback: (AppConfig.getNetType() == 1) ? NebPay.config.testnetUrl : NebPay.config.mainnetUrl, //在测试网查询
             listener: this.cbPush //设置listener, 处理交易返回信息
         }
 

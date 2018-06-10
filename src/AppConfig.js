@@ -45,16 +45,18 @@ TX Hash	0f9ea2bc54232fd8f1b80b6c741424cada97ad1071f99aaed96e864fbc829ebf
 Contract address	n1fD9qnfhkHm73cHUipnjM8NaU8wehEqP5z
 Nonce	57
 
-====================mainnet==========
-TX Hash	50557a574cdd9113fd0a0376d13eacf626c279c3d901237e507a72ad362717fa
-Contract address	n1wWWR62GJm9EihhmDFeKQ2NNsqrYi5bN45
-TxReceipt Status	pending
+TX Hash	f365778d36e3ee41a79706a63071ce60a7fdeb245968ef986fd07e64c6452482
+Contract address	n1s8FadRzQbs7ZWbXqAQGGivv8NidMmWuXi
+
+
+
+//----------mainnet nas library contract--------------
+
+TX Hash	127beb4bb5e92aed86ddca57da1e6b4440c3773d9e6e1a0d9ac5900def12d69c
+Contract address	n1yT499zuwvAU4yLLHJ9d4M8WcmqjfCWEUf
+TxReceipt Status	success
 来自地址	n1YRK3SRPxCsJx3z3hvugyMonQZuKYx3n6Z
 目的地址	n1YRK3SRPxCsJx3z3hvugyMonQZuKYx3n6Z
-金额	
-
-Nonce	22
-Gas 价格	
 
  */
 
@@ -66,15 +68,21 @@ TX Hash	1f38527ceb53eede24fcfcc3e458fc7198771d347d4bb65af350de8cb0f1ebf2
 Contract address	n1pW8xuSD4QzBNx7L7v9hjyPSphv18MeLPZ
 
 
+//--------------mainnet user contract ----------
 
+TX Hash	e06746c55a5845ae3e218bda495a14092cab3c315994dc045e3491209936b4d8
+Contract address	n1naK6fKGufE7iMxZrS2bNnkqBemex6Wst1
+TxReceipt Status	success
+来自地址	n1YRK3SRPxCsJx3z3hvugyMonQZuKYx3n6Z
+目的地址	n1YRK3SRPxCsJx3z3hvugyMonQZuKYx3n6Z
+金额	
+
+0
+≈ 0 Wei
+Nonce	25
 
 */
 
-/**
- * ****** local test *************
- * 【User contract】
- *
- */
 
 
  /**
@@ -89,15 +97,15 @@ const DAPP_HTTPREQUEST_HOST_MAIN_NET = "https://mainnet.nebulas.io";
  * Dapp [数据模块] contract address 对应合约 “HomeLibraryContract.js”
  */
 const LOCALNET_DAPP_LIBRARY_CONTRACT_ADDRESS = "";
-const TESTNET_DAPP_LIBRARY_CONTRACT_ADDRESS = "n1fD9qnfhkHm73cHUipnjM8NaU8wehEqP5z";
-const MAINNET_DAPP_LIBRARY_CONTRACT_ADDRESS = "";
+const TESTNET_DAPP_LIBRARY_CONTRACT_ADDRESS = "n1s8FadRzQbs7ZWbXqAQGGivv8NidMmWuXi";
+const MAINNET_DAPP_LIBRARY_CONTRACT_ADDRESS = "n1yT499zuwvAU4yLLHJ9d4M8WcmqjfCWEUf";
 
 /**
  * Dapp [用户模块] contract address 对应合约 "UserContract.js"
  */
 const LOCALNET_DAPP_USER_CONTRACT_ADDRESS  = "";
 const TESTNET_DAPP_USER_CONTRACT_ADDRESS  = "n1pW8xuSD4QzBNx7L7v9hjyPSphv18MeLPZ";
-const MAINNET_DAPP_USER_CONTRACT_ADDRESS = "";
+const MAINNET_DAPP_USER_CONTRACT_ADDRESS = "n1naK6fKGufE7iMxZrS2bNnkqBemex6Wst1";
 
 /**
  * 账本地址
@@ -110,7 +118,7 @@ class AppConfig extends Component{
      * return 0 is mainnet, 1 is testnet, 2 is localnet
      */
     static getNetType(){
-        return 1
+        return 0; //1;
     }
 
     /**

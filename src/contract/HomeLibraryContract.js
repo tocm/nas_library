@@ -20,6 +20,7 @@ var BookItem = function(text) {
 		this.bookName = obj.bookName;
 		this.location = obj.location;
         this.bookAuthor = obj.bookAuthor;
+        this.bookPublishing = obj.bookPublishing;
         this.bookDate = obj.bookDate;
         this.description = obj.description;
         this.time = obj.time;
@@ -31,6 +32,7 @@ var BookItem = function(text) {
 		this.bookName = "";
 		this.location = "";
         this.bookAuthor = "";
+        this.bookPublishing = "";
         this.bookDate = "";
         this.description = "",
         this.time = ""
@@ -68,12 +70,13 @@ LibraryContractObj.prototype = {
     /**
      * 上传数据到链
      */
-    save: function(user_name, book_name, book_loc, book_author, book_date, description, add_time) {
+    save: function(user_name, book_name, book_loc, book_author, book_publishing, book_date, description, add_time) {
 
         user_name = user_name.trim();
         book_name = book_name.trim();
         book_loc = book_loc.trim();
         book_author = book_author.trim();
+        book_publishing = book_publishing.trim();
         book_date = book_date.trim();
         description = description.trim();
         add_time = add_time.trim();
@@ -82,12 +85,12 @@ LibraryContractObj.prototype = {
             
             throw new Error("Sorry, input is null");
         }
-
+        var libItem = null;
         var from_nasAddress = Blockchain.transaction.from;
-        var libItem = this.LibContract.get(book_name);
-        if (libItem){
-            throw new Error("the book has been occupied");
-        }
+        // libItem = this.LibContract.get(book_name);
+        // if (libItem){
+        //     throw new Error("the book has been occupied");
+        // }
 
         this.book_id +=1;
         libItem = new BookItem();
@@ -97,6 +100,7 @@ LibraryContractObj.prototype = {
 		libItem.bookName = book_name;
 		libItem.location = book_loc;
         libItem.bookAuthor = book_author;
+        libItem.bookPublishing = book_publishing;
         libItem.bookDate = book_date;
         libItem.description = description;
         libItem.time = add_time;
@@ -123,6 +127,26 @@ LibraryContractObj.prototype = {
         }
         
         return this.LibContract.get(bookName);
+    },
+
+    /**
+     * 获得单条记录 by bookId
+     */
+    getItemById: function(bookId, userName) {
+        bookId = bookId.trim();
+        userName = userName.trim();
+        if (userName === "" || bookId === "") {
+            throw new Error("Sorry, Not exist user name.")
+        }
+        
+        var itemBook = this.arrayMapsBooks.get(bookId);
+        if(itemBook === null || itemBook === undefined) {
+            return -1;
+        }
+        if(itemBook.userName === userName) {
+            return itemBook;
+        }
+            
     },
 
     del: function(key) {

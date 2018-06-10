@@ -165,7 +165,7 @@ class HomePage extends Component{
                                     userNasAddress : "",
                                     id : "",
                                 */
-                                var jsonData = {"userName": this.props.username, "bookName": bookName, "bookAuthor": bookAuthor, "bookDate": bookDate, "bookLocation": location, "description": description};
+                                var jsonData = {"userName": this.props.username, "bookName": bookName, "bookAuthor": bookAuthor, "bookPublishing": bookPublishing, "bookDate": bookDate, "bookLocation": location, "description": description};
                                 console.log("the input value is ", jsonData);
                                 
                                 if(jsonData === "")
