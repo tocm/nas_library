@@ -122,7 +122,7 @@ class HomePage extends Component{
             </tr>
             <tr>
                 {/* 合并单元列 */}
-            <td colspan='2'> <span className="css_div_table_td" style={{paddingLeft: 10}}> 注意：带 * 为必填项</span></td>
+            <td colSpan='2'> <span className="css_div_table_td" style={{paddingLeft: 10}}> 注意：带 * 为必填项</span></td>
             </tr>
             <tr>
                 <td>

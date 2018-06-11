@@ -1,3 +1,8 @@
+/**
+ * Author: Andy.chen 
+ * date: 2018-06-11
+ * version: 0.1.0
+ */
 import React, {
     Component
 } from 'react';
@@ -95,7 +100,7 @@ class App extends Component {
 
     }
 
-    cbPush = (resp) => {
+    cbPushAddLibraryItem = (resp) => {
         console.log("response of push: " + JSON.stringify(resp))
         var intervalQuery = setInterval(() => {
             api.getTransactionReceipt({
@@ -109,6 +114,13 @@ class App extends Component {
                     console.log("交易成功......")
                     //清除定时器
                     clearInterval(intervalQuery)
+
+                    var confirm =  window.confirm("添加新数据成功，将自动跳转数据列表!"); 
+                    if(confirm) {
+                        //todo go to list data page
+                        this.func_listAllData();
+                    }
+
                 } else {
                     console.log("交易失败......")
                     //清除定时器
@@ -131,16 +143,17 @@ class App extends Component {
                     console.log("pending.....")
                 } else if (receipt["status"] === 1) {
                     console.log("交易成功......")
-                    var confirm =  window.confirm("注册已成功，需要马上登录?"); 
+                    var confirm =  window.confirm("注册已成功，本次将自动为你登录!"); 
                     if(confirm) {
-                        //go to login success
+                        //直接登录并进入
+                        console.log("注册成功，直接自动登录~~~~");
                         this.func_loginSuccess(_userName);
                     }
                     //清除定时器
                     clearInterval(intervalQuery)
                 } else {
                     console.log("交易失败......")
-                    alert("注册失败");
+                    alert("注册失败, 本帐号已存在，请重新输入帐户再试！");
                     _userName = "";
                     //清除定时器
                     clearInterval(intervalQuery)
@@ -149,6 +162,7 @@ class App extends Component {
         }, 5000);
 
     }
+
 
     func_exitListener = () =>{
         console.log("user exit.....");
@@ -368,7 +382,7 @@ class App extends Component {
             },
             //callback 是交易查询服务器地址,
         //    callback: (AppConfig.getNetType() == 1) ? NebPay.config.testnetUrl : NebPay.config.mainnetUrl, //在测试网查询
-            listener: this.cbPush //设置listener, 处理交易返回信息
+            listener: this.cbPushAddLibraryItem //设置listener, 处理交易返回信息
         }
 
         //发送交易(发起智能合约调用)

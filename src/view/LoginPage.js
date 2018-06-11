@@ -32,6 +32,27 @@ class LoginPage extends Component {
         submitListener: PropTypes.func.isRequired,
     }
 
+    /**
+     * 处理注册与登录 button 的切换
+     */
+    transferLoginOrRegister() {
+        var isClickedRegisterBtn = !this.state.isRegister;
+        if(isClickedRegisterBtn) {
+            //todo register
+            _titleName = "用户注册";
+            _sumbitBtnName = "注册并登录";
+            _headerRegisterBtnName = "登录"
+        } else {
+            //todo login
+            _titleName = "用户登录";
+            _sumbitBtnName = "登录";
+            _headerRegisterBtnName = "注册"
+        }
+        this.refs.input_username.value = "";
+        this.refs.input_userpassword.value = "";
+        this.setState({isRegister : isClickedRegisterBtn});
+
+    }
     render() {
         const{
             submitListener,
@@ -43,21 +64,7 @@ class LoginPage extends Component {
             registerBtnName={_headerRegisterBtnName}
             registerBtnListener= {()=>{
                 //todo go to register ui
-                var isClickedRegisterBtn = !this.state.isRegister;
-                if(isClickedRegisterBtn) {
-                    //todo register
-                    _titleName = "用户注册";
-                    _sumbitBtnName = "注册并登录";
-                    _headerRegisterBtnName = "登录"
-                } else {
-                    //todo login
-                    _titleName = "用户登录";
-                    _sumbitBtnName = "登录";
-                    _headerRegisterBtnName = "注册"
-                }
-                this.refs.input_username.value = "";
-                this.refs.input_userpassword.value = "";
-                this.setState({isRegister : isClickedRegisterBtn});
+               this.transferLoginOrRegister();
             }}/>
 
             <div className="css_div_login_container" style={{height: 380}}> 

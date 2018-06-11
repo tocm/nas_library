@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';//used by react version >1.5 
 
 import '../App.css';
+import Utils from '../Utils';
+import AppConfig from '../AppConfig';
 
+var _HelpPageUrl = "";
 class LibHeader extends Component{
     constructor(props){
         super(props);
+        _HelpPageUrl = AppConfig.getHelpPage();
     }
 
     static get defaultPropsType(){
@@ -37,7 +41,7 @@ class LibHeader extends Component{
                 {/* 右边按钮 */}
                 <div className="css_header_r">
                     <button className="css_header_button" onClick={()=>{
-                            window.open('../../public/help.html');
+                            window.open(_HelpPageUrl);
                         }}>帮助中心</button>
                     <button className="css_header_button" onClick={this.props.exitBtnListener}>退出</button>
                 </div>
@@ -62,7 +66,7 @@ class LibHeader extends Component{
                 {/* 右边按钮 */}
                 <div className="css_header_r">
                         <button className="css_header_button" onClick={()=>{
-                            window.open('../../public/help.html');
+                            window.open(_HelpPageUrl);
                         }}>帮助中心</button>
                         <button className="css_header_button" onClick={this.props.registerBtnListener}>{this.props.registerBtnName}</button>
                 </div>

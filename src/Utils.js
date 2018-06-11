@@ -35,7 +35,7 @@ class Utils extends Component{
             var table = document.getElementById(id);  
             var rows = table.getElementsByTagName("tr"); 
             for(var i = 0; i < rows.length; i++){        
-                if(i % 2 == 0){
+                if((i % 2) === 0){
                     rows[i].className = "evenrowcolor";
                 }else{
                     rows[i].className = "oddrowcolor";

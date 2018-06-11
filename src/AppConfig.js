@@ -118,7 +118,7 @@ class AppConfig extends Component{
      * return 0 is mainnet, 1 is testnet, 2 is localnet
      */
     static getNetType(){
-        return 0; //1;
+        return 0; 
     }
 
     /**
@@ -182,6 +182,10 @@ class AppConfig extends Component{
         return ACCOUNT_ADDRESS;
     }
 
+
+    static getHelpPage() {
+        return "https://blog.nebulas.io/2018/04/12/creating-a-nas-wallet/";
+    }
 
     render(){
         return;
