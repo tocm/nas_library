@@ -1,7 +1,12 @@
 {
-  "main.css": "static/css/main.7d88a2ac.css",
-  "main.css.map": "static/css/main.7d88a2ac.css.map",
-  "main.js": "static/js/main.52fab0bd.js",
-  "main.js.map": "static/js/main.52fab0bd.js.map",
-  "static/media/library_ic.png": "static/media/library_ic.85847b38.png"
+  "main.css": "static/css/main.9377a810.css",
+  "main.css.map": "static/css/main.9377a810.css.map",
+  "main.js": "static/js/main.f018f3e6.js",
+  "main.js.map": "static/js/main.f018f3e6.js.map",
+  "static/media/birthday_350.jpg": "static/media/birthday_350.f6f9b989.jpg",
+  "static/media/library_350.jpg": "static/media/library_350.d83d7820.jpg",
+  "static/media/library_ic.png": "static/media/library_ic.85847b38.png",
+  "static/media/qrcode_1.png": "static/media/qrcode_1.8fdde7f5.png",
+  "static/media/soundgame_350.jpg": "static/media/soundgame_350.71aae92d.jpg",
+  "static/media/walletscontract_350.jpg": "static/media/walletscontract_350.6ee70f06.jpg"
 }
